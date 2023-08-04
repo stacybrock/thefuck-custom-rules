@@ -3,7 +3,7 @@ from thefuck.utils import for_app
 @for_app('pip')
 def match(command):
     return ('pip list' in command.script
-            and 'A new release of pip is available' in command.output)
+            and 'A new release of pip' in command.output)
 
 def get_new_command(command):
     return 'pip install --upgrade pip'
